@@ -1,5 +1,5 @@
 #include <iostream>
-#include "./include/insertion.h"
+#include "./include/bouble.h"
 using namespace std;
 
 void printArray(int array[10]){
@@ -18,18 +18,20 @@ bool sorted(int array[10]){
 }
 
 bool test(int array[10], int cases){
-    insertion sortArray(array);
+    bouble sortArray(array);
     return sorted(array);
 }
 
 int main() {
     int array[10];
     
-    int a[5][10]={{1,3,2,6,4,5,9,7,8,0},
-    {6,8,3,1,2,5,4,9,7,0},
-    {7,0,3,6,2,1,8,9,5,4},
-    {9,7,5,3,1,0,8,6,4,2},
-    {1,0,2,9,3,8,4,7,5,6}};
+    int a[5][10]={
+        {1,3,2,6,4,5,9,7,8,0},
+        {6,8,3,1,2,5,4,9,7,0},
+        {7,0,3,6,2,1,8,9,5,4},
+        {9,7,5,3,1,0,8,6,4,2},
+        {1,0,2,9,3,8,4,7,5,6}
+    };
 
     for(int cases=1;cases<6;cases++){
         for(int j=0;j<10;j++)
@@ -45,5 +47,3 @@ int main() {
     }
     return 0;
 }
-
-// undone

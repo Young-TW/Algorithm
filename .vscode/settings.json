@@ -3,6 +3,7 @@
         "tuple": "cpp",
         "utility": "cpp",
         "xmemory": "cpp",
-        "atomic": "cpp"
+        "atomic": "cpp",
+        "iostream": "cpp"
     }
 }

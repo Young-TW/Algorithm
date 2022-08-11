@@ -1,5 +1,5 @@
 #include <iostream>
-#include "./include/selection.h"
+#include "./include/insertion.h"
 using namespace std;
 
 void printArray(int array[10]){
@@ -17,7 +17,7 @@ int main() {
     }
     cout << "before sort\n";
     printArray(array);
-    selection sortArray(array);
+    insertion sortArray(array);
     cout << "after sort\n";
     printArray(array);
     return 0;

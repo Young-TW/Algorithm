@@ -26,18 +26,11 @@ public:
         head = NULL;
     }
 
-    bool ListEmpty();
     void insertNode(int);
     void printList();
     void deleteNode(int);
 };
 
-bool LinkedList::ListEmpty(){
-    if(head == NULL)
-        cout << "List empty";
-        return true;
-    return false;
-}
 
 void LinkedList::insertNode(int index){
     Node* newNode = new Node(index);
@@ -124,5 +117,3 @@ int main(){
     cout << endl;
     return 0;
 }
-
-// undone

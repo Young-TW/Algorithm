@@ -3,26 +3,30 @@ using namespace std;
 
 class stack{
 private:
-    int top = 0;
+    int top;
     int length;
-    int stackArray[];
+    int *stack;
 public:
-    stack();
-    stack(int length);
+    stack():top(-1),length(1){
+        stack = new int[length];
+    }
 
     void push(int input);
     int pop();
     bool IsEmpty();
     int Top();
+    void DoubleLength();
 };
 
-stack::stack(int length){
-    int stackArray[length];
+void stack::DoubleLength(){
+    length *= 2;
+    int *newStack = new int[length];
+    
 }
 
 void stack::push(int input){
-    stackArray[top] = input;
     top++;
+    stackArray[top] = input;
 }
 
 int stack::pop(){
@@ -31,7 +35,7 @@ int stack::pop(){
 }
 
 bool stack::IsEmpty(){
-    return (top == 0);
+    return (top == -1);
 }
 
 int stack::Top(){
@@ -41,7 +45,7 @@ int stack::Top(){
 int main(){
     stack s();
     s.push(5);
-    cout << s.pop();
+    cout << "pop=" << s.pop() << " size=" << s.size() << " top=" << s.Top() << endl;
 }
 
 // undone
